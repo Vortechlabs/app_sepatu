@@ -1,0 +1,79 @@
+.produk-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.produk-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.produk-container > p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #555;
+}
+
+.produk-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.produk-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.produk-item {
+  display: flex;
+  flex-direction: column; /* ubah dari column-reverse ke column */
+  align-items: center;
+  text-align: center;
+  width: 200px;
+}
+
+
+
+  .new-arrival {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .new-arrival h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .new-arrival .produk-item {
+    width: 250px;
+    padding: 15px;
+    margin: 0 auto; /* Biar kotaknya di tengah */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .new-arrival .produk-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .new-arrival .produk-item h3,
+  .new-arrival .produk-item p {
+    text-align: center;
+
+  }
+  
+  
