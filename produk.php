@@ -77,7 +77,7 @@ if (!empty($params)) {
 
                 <?php if (isset($_SESSION['id_users'])) : ?>
                     <a href="./user/profil/profil.php" class="text-gray-700 hover:text-blue-900">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-user "></i>
                     </a>
                 <?php else : ?>
                     <a href="./autentikasi/login.php" class="bg-blue-900 text-white px-4 py-1 rounded hover:bg-blue-800">Login</a>
