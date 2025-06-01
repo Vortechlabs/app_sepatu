@@ -48,14 +48,15 @@
 </head>
 <body>
 
+
 <div class="register-container">
     <h2>Register</h2>
-    <form>
-        <input type="text" placeholder="Nama Lengkap" required>
-        <input type="email" placeholder="Email" required>
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
-        <input type="password" placeholder="Konfirmasi Password" required>
+    <form action="proses_register.php" method="POST">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="konfirmasi" placeholder="Konfirmasi Password" required>
+        <input type="text" name="no_telepon" placeholder="No Telepon" required>
         <button type="submit">Daftar</button>
     </form>
 </div>

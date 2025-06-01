@@ -1,9 +1,18 @@
+<?php
+session_start();
+// Kalau sudah login admin, redirect ke dashboard admin
+if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
+    header('Location: admin_dashboard.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Admin</title>
     <style>
         body {
             display: flex;
@@ -44,15 +53,26 @@
         .login-container button:hover {
             background: #0056b3;
         }
+        .error-msg {
+            color: red;
+            text-align: center;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
 
 <div class="login-container">
-    <h2>Login</h2>
-    <form>
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
+    <h2>Login Admin</h2>
+
+    <?php if (isset($_SESSION['login_error'])): ?>
+        <div class="error-msg"><?= htmlspecialchars($_SESSION['login_error']) ?></div>
+        <?php unset($_SESSION['login_error']); ?>
+    <?php endif; ?>
+
+    <form method="POST" action="./proses_login_admin.php">
+        <input type="text" name="username" placeholder="Username" required autofocus />
+        <input type="password" name="password" placeholder="Password" required />
         <button type="submit">Masuk</button>
     </form>
 </div>
